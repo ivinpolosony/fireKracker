@@ -79,30 +79,14 @@ class Map extends Component {
     });
 
 
-    var LeafIcon = L.Icon.extend({
-      options: {
-        shadowUrl: 'leaf-shadow.png',
-        iconSize:     [38, 95],
-        shadowSize:   [50, 64],
-        iconAnchor:   [22, 94],
-        shadowAnchor: [4, 62],
-        popupAnchor:  [-3, -76]
-      }
-    }); 
-    // var map = L.map('map'),
-    // realtime = L.realtime({
-    //     url: 'https://wanderdrone.appspot.com/',
-    //     crossOrigin: true,
-    //     type: 'json'
-    // }, {
-    //     interval: 3 * 1000
-    // }).addTo(map);
-
-    // realtime.on('update', function() {
-    // map.fitBounds(realtime.getBounds(), {maxZoom: 3});
-    // });
-
-
+    var greenIcon = L.icon({
+        iconUrl: 'https://miro.medium.com/fit/c/256/256/1*frxTSZMgnBUzbrBHdKrNcw.png',
+        iconSize:     [38, 38], // size of the icon
+        shadowSize:   [50, 64], // size of the shadow
+        iconAnchor:   [22, 80], // point of the icon which will correspond to marker's location
+        shadowAnchor: [4, 62],  // the same for the shadow
+        popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+    });
 
     // L.circle(circle, 500, {
     //   color: 'red',
@@ -110,12 +94,13 @@ class Map extends Component {
     //   fillOpacity: 0.5
     // }).addTo(this.map).bindPopup("I am a circle.");
 
-    L.marker(Bob).addTo(this.map)
-      .bindPopup("<b>Bob</b>").openPopup();
+    L.marker(Bob,{icon: greenIcon}).addTo(this.map)
+      .bindPopup("<b>You are <h1>300 meters </h1>away from potential danger</b>").openPopup();
 
 
     L.marker(Bob1).addTo(this.map)
-      .bindPopup("<b>Bob's friend</b>").openPopup();
+      // .bindPopup("<b>Bob's friend</b>").openPopup();
+      .bindPopup("<b>Bob's friend</b>");
       
 
       heatmapLayer.setData(testData);

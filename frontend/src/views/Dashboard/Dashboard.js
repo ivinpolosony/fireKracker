@@ -228,12 +228,12 @@ class Dashboard extends Component {
           </Col>
         </Row>
         <Row>
-          <Col>
+          <Col sm="6">
             <Card>
-              <CardHeader>Danger zones</CardHeader>
+              <CardHeader>Drone eye</CardHeader>
               <CardBody>
                 {/* <Player> */}
-                  <iframe src = "http://localhost:8000" ></iframe>
+                  <iframe src = "http://10.214.151.208:8000" width="100%" height="200" frameBorder="0"></iframe>
                   {/* <video width="400" controls autoplay>
                     <source src="http://localhost:8000" type="video/mp4"></source>
                   </video> */}
