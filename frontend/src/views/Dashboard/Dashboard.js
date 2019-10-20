@@ -16,8 +16,9 @@ import {
 import { CustomTooltips } from "@coreui/coreui-plugin-chartjs-custom-tooltips";
 import { getStyle, hexToRgba } from "@coreui/coreui/dist/js/coreui-utilities";
 import Map from "../../components/Map";
-const Widget03 = lazy(() => import('../../views/Widgets/Widget03'));
+// import '~video-react/dist/video-react.css'; // import css
 
+import { Player } from 'video-react';
 
 const brandSuccess = getStyle("--success");
 const brandInfo = getStyle("--info");
@@ -225,6 +226,22 @@ class Dashboard extends Component {
               <CardHeader>Danger zones</CardHeader>
               <CardBody>
                 <Map></Map>
+              </CardBody>
+            </Card>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Card>
+              <CardHeader>Danger zones</CardHeader>
+              <CardBody>
+                {/* <Player> */}
+                  <iframe src = "http://localhost:8000" ></iframe>
+                  {/* <video width="400" controls autoplay>
+                    <source src="http://localhost:8000" type="video/mp4"></source>
+                  </video> */}
+                {/* </Player> */}
+
               </CardBody>
             </Card>
           </Col>
