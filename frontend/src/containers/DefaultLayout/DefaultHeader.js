@@ -7,7 +7,8 @@ import {
   DropdownMenu,
   DropdownToggle,
   Nav,
-  NavItem
+  NavItem,
+  Button
 } from "reactstrap";
 import PropTypes from "prop-types";
 
@@ -40,6 +41,7 @@ class DefaultHeader extends Component {
         <AppSidebarToggler className="d-md-down-none" display="lg" />
 
         <Nav className="ml-auto" navbar>
+          <Button color="danger" style={{padding:"10px 30px"}}>Fire spotted</Button>
           <NavItem className="d-md-down-none">
             <NavLink to="#" className="nav-link">
               <i className="icon-bell"></i>
@@ -56,7 +58,7 @@ class DefaultHeader extends Component {
           <UncontrolledDropdown nav direction="down">
             <DropdownToggle nav>
               <img
-                src={"../../assets/img/avatars/6.jpg"}
+                src={"https://miro.medium.com/fit/c/256/256/1*frxTSZMgnBUzbrBHdKrNcw.png"}
                 className="img-avatar"
                 alt="admin@bootstrapmaster.com"
               />
@@ -67,11 +69,11 @@ class DefaultHeader extends Component {
               </DropdownItem>
               <DropdownItem>
                 <i className="fa fa-bell-o"></i> Updates
-                <Badge color="info">42</Badge>
+                <Badge color="info">10</Badge>
               </DropdownItem>
               <DropdownItem>
                 <i className="fa fa-envelope-o"></i> Messages
-                <Badge color="success">42</Badge>
+                <Badge color="success">5</Badge>
               </DropdownItem>
               <DropdownItem>
                 <i className="fa fa-comments"></i> Comments

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Line } from "react-chartjs-2";
+import { Badge, Pagination, PaginationItem, PaginationLink, Table } from 'reactstrap';
+
 import {
   Button,
   ButtonGroup,
@@ -166,6 +168,90 @@ class Report extends Component {
               <CardHeader>Danger zones</CardHeader>
               <CardBody>
                 <Map></Map>
+              </CardBody>
+            </Card>
+          </Col>
+        </Row>
+
+        <Row>
+        <Col xs="12" lg="6">
+            <Card>
+              <CardHeader>
+                <i className="fa fa-align-justify"></i> Incidents
+              </CardHeader>
+              <CardBody>
+                <Table responsive>
+                  <thead>
+                  <tr>
+                    <th>Reporter</th>
+                    <th>Date registered</th>
+                    <th>Role</th>
+                    <th>Status</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>Samppa Nori</td>
+                    <td>2012/01/01</td>
+                    <td>Police</td>
+                    <td>
+                      <Badge color="success">Active</Badge>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Estavan Lykos</td>
+                    <td>2012/02/01</td>
+                    <td>Citizen</td>
+                    <td>
+                      <Badge color="danger">Banned</Badge>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Chetan Mohamed</td>
+                    <td>2012/02/01</td>
+                    <td>Citizen</td>
+                    <td>
+                      <Badge color="secondary">Inactive</Badge>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Derick Maximinus</td>
+                    <td>2012/03/01</td>
+                    <td>Drone operator</td>
+                    <td>
+                      <Badge color="warning">Pending</Badge>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Friderik Dávid</td>
+                    <td>2012/01/21</td>
+                    <td>Firefighter</td>
+                    <td>
+                      <Badge color="success">Active</Badge>
+                    </td>
+                  </tr>
+                  </tbody>
+                </Table>
+                <Pagination>
+                  <PaginationItem>
+                    <PaginationLink previous tag="button"></PaginationLink>
+                  </PaginationItem>
+                  <PaginationItem active>
+                    <PaginationLink tag="button">1</PaginationLink>
+                  </PaginationItem>
+                  <PaginationItem>
+                    <PaginationLink tag="button">2</PaginationLink>
+                  </PaginationItem>
+                  <PaginationItem>
+                    <PaginationLink tag="button">3</PaginationLink>
+                  </PaginationItem>
+                  <PaginationItem>
+                    <PaginationLink tag="button">4</PaginationLink>
+                  </PaginationItem>
+                  <PaginationItem>
+                    <PaginationLink next tag="button"></PaginationLink>
+                  </PaginationItem>
+                </Pagination>
               </CardBody>
             </Card>
           </Col>
