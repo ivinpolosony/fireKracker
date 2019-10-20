@@ -68,6 +68,8 @@ class Map extends Component {
     // create map
     var Bob = [47.508, -120];
     var Bob1 = [47.808, -121];
+    var Dron = [47.908, -121];
+
 
     var circle = [47.53, -120];
     this.map = L.map("map", {
@@ -79,8 +81,17 @@ class Map extends Component {
     });
 
 
-    var greenIcon = L.icon({
+    var bobIcon = L.icon({
         iconUrl: 'https://miro.medium.com/fit/c/256/256/1*frxTSZMgnBUzbrBHdKrNcw.png',
+        iconSize:     [38, 38], // size of the icon
+        shadowSize:   [50, 64], // size of the shadow
+        iconAnchor:   [22, 80], // point of the icon which will correspond to marker's location
+        shadowAnchor: [4, 62],  // the same for the shadow
+        popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+    });
+
+    var dronIcon = L.icon({
+        iconUrl: 'https://icon-library.net/images/drone-icon-vector/drone-icon-vector-9.jpg',
         iconSize:     [38, 38], // size of the icon
         shadowSize:   [50, 64], // size of the shadow
         iconAnchor:   [22, 80], // point of the icon which will correspond to marker's location
@@ -94,8 +105,12 @@ class Map extends Component {
     //   fillOpacity: 0.5
     // }).addTo(this.map).bindPopup("I am a circle.");
 
-    L.marker(Bob,{icon: greenIcon}).addTo(this.map)
+    L.marker(Bob,{icon: bobIcon}).addTo(this.map)
       .bindPopup("<b>You are <h1>300 meters </h1>away from potential danger</b>").openPopup();
+
+      L.marker(Dron,{icon: dronIcon}).addTo(this.map)
+      .bindPopup("<b>Drone</b>").openPopup();
+
 
 
     L.marker(Bob1).addTo(this.map)
