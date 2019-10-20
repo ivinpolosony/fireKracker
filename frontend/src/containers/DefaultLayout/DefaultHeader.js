@@ -16,7 +16,7 @@ import {
   AppNavbarBrand,
   AppSidebarToggler
 } from "@coreui/react";
-import logo from "../../assets/img/brand/logo.png";
+import logo from "../../assets/img/brand/logo_raf.png";
 import sygnet from "../../assets/img/brand/sygnet.svg";
 
 const propTypes = {
@@ -34,7 +34,7 @@ class DefaultHeader extends Component {
       <React.Fragment>
         <AppSidebarToggler className="d-lg-none" display="md" mobile />
         <AppNavbarBrand
-          full={{ src: logo, width: 155, height: 155, alt: "Nasa Logo" }}
+          full={{ src: logo, width: 155, height: 100, alt: "Nasa Logo" }}
           minimized={{ src: sygnet, width: 30, height: 30, alt: "Nasa Logo" }}
         />
         <AppSidebarToggler className="d-md-down-none" display="lg" />

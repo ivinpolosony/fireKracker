@@ -70,10 +70,20 @@ class Map extends Component {
     var circle = [47.53, -120];
     this.map = L.map("map", {
       center: Bob,
-      zoom: 1000,
+      zoom: 7,
       layers: [
         baselayer , heatmapLayer
       ]
+    });
+
+
+    var greenIcon = L.icon({
+        iconUrl: 'https://miro.medium.com/fit/c/256/256/1*frxTSZMgnBUzbrBHdKrNcw.png',
+        iconSize:     [38, 38], // size of the icon
+        shadowSize:   [50, 64], // size of the shadow
+        iconAnchor:   [22, 80], // point of the icon which will correspond to marker's location
+        shadowAnchor: [4, 62],  // the same for the shadow
+        popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
     });
 
     // L.circle(circle, 500, {
@@ -82,7 +92,7 @@ class Map extends Component {
     //   fillOpacity: 0.5
     // }).addTo(this.map).bindPopup("I am a circle.");
 
-    L.marker(Bob).addTo(this.map)
+    L.marker(Bob,{icon: greenIcon}).addTo(this.map)
       .bindPopup("<b>Bob</b>").openPopup();
 
       heatmapLayer.setData(testData);
