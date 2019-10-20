@@ -31,6 +31,7 @@
     "heatmap.js": "^2.0.5",
     "leaflet": "^1.5.1",
     "leaflet-heatmap": "^1.0.0",
+    "leaflet.heat": "https://github.com/Leaflet/Leaflet.heat/tarball/gh-pages",
     "node-sass": "^4.12.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
