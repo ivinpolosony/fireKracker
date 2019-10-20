@@ -70,24 +70,24 @@ class DefaultAside extends Component {
                 <div className="avatar float-right">
                   <img className="img-avatar" src="assets/img/avatars/7.jpg" alt="admin@bootstrapmaster.com"></img>
                 </div>
-                <div>Meeting with <strong>Lucas</strong> </div>
+                <div><strong>Mark</strong> spotted a fire</div>
                 <small className="text-muted mr-3">
                   <i className="icon-calendar"></i>&nbsp; 1 - 3pm
                 </small>
                 <small className="text-muted">
-                  <i className="icon-location-pin"></i> Palo Alto, CA
+                  <i className="icon-location-pin"></i> Washington, Seattle
                 </small>
               </ListGroupItem>
               <ListGroupItem action tag="a" href="#" className="list-group-item-accent-info list-group-item-divider">
                 <div className="avatar float-right">
                   <img className="img-avatar" src="assets/img/avatars/4.jpg" alt="admin@bootstrapmaster.com"></img>
                 </div>
-                <div>Skype with <strong>Megan</strong></div>
+                <div><strong>Mark</strong> spotted a fire</div>
                 <small className="text-muted mr-3">
-                  <i className="icon-calendar"></i>&nbsp; 4 - 5pm
+                  <i className="icon-calendar"></i>&nbsp; 1 - 3pm
                 </small>
                 <small className="text-muted">
-                  <i className="icon-social-skype"></i> On-line
+                  <i className="icon-location-pin"></i> Washington, Seattle
                 </small>
               </ListGroupItem>
               <ListGroupItem className="list-group-item-accent-secondary bg-light text-center font-weight-bold text-muted text-uppercase small">Tomorrow</ListGroupItem>
