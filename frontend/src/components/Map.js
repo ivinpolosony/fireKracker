@@ -1,13 +1,12 @@
 import React, { Component } from "react";
-import L from 'leaflet';
+import L from "leaflet";
 import "leaflet.heat";
-import HeatmapOverlay from 'leaflet-heatmap/leaflet-heatmap.js';
+import HeatmapOverlay from "leaflet-heatmap/leaflet-heatmap.js";
 
 // import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 // import HeatmapLayer from '../src/HeatmapLayer';
-import data from '../data/washington_2019.json'
-import heatmap from 'leaflet-heatmap'
-
+import data from "../data/washington_2019.json";
+import heatmap from "leaflet-heatmap";
 
 const style = {
   width: "100%",
@@ -16,9 +15,9 @@ const style = {
 
 class Map extends Component {
   componentDidMount() {
-    console.log(data)
+    console.log(data);
 
-    // Heatmap 
+    // Heatmap
 
     var cfg = {
       // radius should be small ONLY if scaleRadius is true (or small radius is intended)
@@ -32,11 +31,11 @@ class Map extends Component {
       //   (there will always be a red spot with useLocalExtremas true)
       "useLocalExtrema": false,
       // which field name in your data represents the latitude - default "lat"
-      latField: 'lat',
+      latField: "lat",
       // which field name in your data represents the longitude - default "lng"
-      lngField: 'lng',
+      lngField: "lng",
       // which field name in your data represents the data value - default "value"
-      valueField: 'count'
+      valueField: "count"
     };
     // var data = require('json!./data.json');
     // var realData = require('json!../data/washington_2019.json');
@@ -62,14 +61,14 @@ class Map extends Component {
     }; 
 
     var heatmapLayer = new HeatmapOverlay(cfg);
-    var baselayer = 
-        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-          attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-        });
+    var baselayer = L.tileLayer("http://{s}.tile.osm.org/{z}/{x}/{y}.png", {
+      attribution:
+        '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    });
     // create map
     var Bob = [47.508, -120];
     var circle = [47.53, -120];
-    this.map = L.map('map', {
+    this.map = L.map("map", {
       center: Bob,
       zoom: 1000,
       layers: [
@@ -90,7 +89,7 @@ class Map extends Component {
   }
 
   render() {
-    return <div id="map" style={style}></div>
+    return <div id="map" style={style}></div>;
   }
 }
 

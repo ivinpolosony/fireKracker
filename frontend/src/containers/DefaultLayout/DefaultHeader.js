@@ -50,11 +50,6 @@ class DefaultHeader extends Component {
           </NavItem>
           <NavItem className="d-md-down-none">
             <NavLink to="#" className="nav-link">
-              <i className="icon-list"></i>
-            </NavLink>
-          </NavItem>
-          <NavItem className="d-md-down-none">
-            <NavLink to="#" className="nav-link">
               <i className="icon-location-pin"></i>
             </NavLink>
           </NavItem>
@@ -77,10 +72,6 @@ class DefaultHeader extends Component {
               <DropdownItem>
                 <i className="fa fa-envelope-o"></i> Messages
                 <Badge color="success">42</Badge>
-              </DropdownItem>
-              <DropdownItem>
-                <i className="fa fa-tasks"></i> Tasks
-                <Badge color="danger">42</Badge>
               </DropdownItem>
               <DropdownItem>
                 <i className="fa fa-comments"></i> Comments
