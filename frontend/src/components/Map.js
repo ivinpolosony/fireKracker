@@ -68,13 +68,12 @@ class Map extends Component {
     // create map
     var Bob = [47.508, -120];
     var Bob1 = [47.808, -121];
-    var Dron = [47.908, -121];
-
+    var Dron = [47.508, -118];
 
     var circle = [47.53, -120];
     this.map = L.map("map", {
       center: Bob,
-      zoom: 7,
+      zoom: 8,
       layers: [
         baselayer , heatmapLayer
       ]
@@ -106,10 +105,10 @@ class Map extends Component {
     // }).addTo(this.map).bindPopup("I am a circle.");
 
     L.marker(Bob,{icon: bobIcon}).addTo(this.map)
-      .bindPopup("<b>You are <h1>300 meters </h1>away from potential danger</b>").openPopup();
+      .bindPopup("<b>You are <h1>15 Kms  </h1>away from potential danger</b>").openPopup();
 
       L.marker(Dron,{icon: dronIcon}).addTo(this.map)
-      .bindPopup("<b>Drone</b>").openPopup();
+      .bindPopup("<b>Drone</b>");
 
 
 
