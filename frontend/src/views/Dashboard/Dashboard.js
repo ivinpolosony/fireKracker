@@ -16,9 +16,6 @@ import {
 import { CustomTooltips } from "@coreui/coreui-plugin-chartjs-custom-tooltips";
 import { getStyle, hexToRgba } from "@coreui/coreui/dist/js/coreui-utilities";
 import Map from "../../components/Map";
-// import '~video-react/dist/video-react.css'; // import css
-
-import { Player } from 'video-react';
 
 const brandSuccess = getStyle("--success");
 const brandInfo = getStyle("--info");
